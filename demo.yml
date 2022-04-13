@@ -1,0 +1,637 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/ark/pulsar/pulsar-docker
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 198
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 45
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 832
+    content: "\r\nThe default interactive shell is now zsh.\r\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\r\nFor more details, please visit https://support.apple.com/kb/HT208050.\r\n\e[?1034hArkMBP:pulsar-docker ark$ "
+  - delay: 2637
+    content: >-
+      docker run -dit --network host -v `pwd`/files:/work/taxi-trip/files --name
+      openmldb 4pdosc/openmldb:0.4.4 bash
+  - delay: 2266
+    content: "\r\n"
+  - delay: 209
+    content: "33dc4523f1d2298ca0b915295a85a8897a0cf02d214d18383cac0ae55b950fce\r\n"
+  - delay: 228
+    content: 'ArkMBP:pulsar-docker ark$ '
+  - delay: 4010
+    content: docker exec -it openmldb bash
+  - delay: 473
+    content: "\r\n"
+  - delay: 254
+    content: "\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 6
+    content: "\r\e[Kroot@docker-desktop:/work/taxi-trip# "
+  - delay: 1096
+    content: l
+  - delay: 131
+    content: s
+  - delay: 135
+    content: "\r\n\e[?2004l\r"
+  - delay: 13
+    content: "convert_data.py  data  fe.sql  files  init.sh  predict.py  predict_server.py  start_predict_server.sh  train.py\r\n\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 492
+    content: .
+  - delay: 166
+    content: /
+  - delay: 347
+    content: i
+  - delay: 195
+    content: 'n'
+  - delay: 179
+    content: i
+  - delay: 93
+    content: 't.sh '
+  - delay: 253
+    content: "\r\n\e[?2004l\r"
+  - delay: 2061
+    content: "ZooKeeper JMX enabled by default\r\nUsing config: /work/zookeeper-3.4.14/bin/../conf/zoo.cfg\r\n"
+  - delay: 20
+    content: "ZooKeeper JMX enabled by default\r\nUsing config: /work/zookeeper-3.4.14/bin/../conf/zoo.cfg\r\nStopping zookeeper ... no zookeeper to stop (could not find file /tmp/zookeeper/zookeeper_server.pid)\r\n"
+  - delay: 3015
+    content: "ZooKeeper JMX enabled by default\r\nUsing config: /work/zookeeper-3.4.14/bin/../conf/zoo.cfg\r\nStarting zookeeper ... "
+  - delay: 1013
+    content: "STARTED\r\n"
+  - delay: 1041
+    content: "Stopping tablet ... \r\nno tablet to stop (could not find file ./bin/tablet.pid)\r\n"
+  - delay: 13
+    content: "Stopping tablet2 ... \r\nno tablet2 to stop (could not find file ./bin/tablet2.pid)\r\n"
+  - delay: 11
+    content: "Stopping nameserver ... \r\nno nameserver to stop (could not find file ./bin/nameserver.pid)\r\n"
+  - delay: 10
+    content: "Stopping apiserver ... \r\nno apiserver to stop (could not find file ./bin/apiserver.pid)\r\n"
+  - delay: 11
+    content: "Stopping taskmanager ... \r\nno taskmanager to stop (could not find file ./bin/taskmanager.pid)\r\nOpenMLDB stopped\r\n"
+  - delay: 15
+    content: "Starting tablet ... \r\n"
+  - delay: 2044
+    content: "Starting tablet2 ... \r\n"
+  - delay: 2036
+    content: "Starting nameserver ... \r\n"
+  - delay: 2032
+    content: "Starting apiserver ... \r\n"
+  - delay: 2028
+    content: "Starting taskmanager ... \r\n"
+  - delay: 1004
+    content: "OpenMLDB start success\r\n\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 3570
+    content: "\r\n\e[?2004l\r\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 1104
+    content: c
+  - delay: 161
+    content: a
+  - delay: 93
+    content: t
+  - delay: 135
+    content: ' '
+  - delay: 159
+    content: f
+  - delay: 143
+    content: i
+  - delay: 114
+    content: l
+  - delay: 95
+    content: es/
+  - delay: 869
+    content: c
+  - delay: 210
+    content: r
+  - delay: 47
+    content: e
+  - delay: 243
+    content: 'ate.sql '
+  - delay: 356
+    content: "\r\n\e[?2004l\r"
+  - delay: 12
+    content: "create database pulsar_test;\r\nuse pulsar_test;\r\ncreate table connector_test(id int, time bigint, index(key=id,ts=time));\r\ndesc connector_test;\r\n\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 4933
+    content: "\e[7m../openmldb/bin/openmldb --zk_cluster=127.0.0.1:2181 --zk_root_path=/openmldb --role=sql_client < files/create.sql\e[27m"
+  - delay: 340
+    content: "\rroot@docker-desktop:/work/taxi-trip# ../openmldb/bin/openmldb --zk_cluster=127.0.0.1:2181 --zk_root_path=/openmldb --role=sql_client < files/create.sql\r\n\e[?2004l\r"
+  - delay: 29
+    content: "2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@753: Client environment:zookeeper.version=zookeeper C client 3.4.14\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@757: Client environment:host.name=docker-desktop\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@764: Client environment:os.name=Linux\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@765: Client environment:os.arch=5.10.76-linuxkit\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@766: Client environment:os.version=#1 SMP Mon Nov 8 10:21:19 UTC 2021\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@774: Client environment:user.name=(null)\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@782: Client environment:user.home=/root\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@log_env@794: Client environment:user.dir=/work/taxi-trip\r\n2022-04-13 07:31:31,030:384(0x7f3bc1486e40):ZOO_INFO@zookeeper_init@827: Initiating client connection, host=127.0.0.1:2181 sessionTimeout=2000 watcher=0x7c16c0 sessionId=0 sessionPasswd=<null> context=0x6038000 flags=0\r\n2022-04-13 07:31:31,031:384(0x7f3bc042a700):ZOO_INFO@check_events@1764: initiated connection to server [127.0.0.1:2181]\r\n2022-04-13 07:31:31,034:384(0x7f3bc042a700):ZOO_INFO@check_events@1811: session establishment complete on server [127.0.0.1:2181], sessionId=0x1001976f3630005, negotiated timeout=4000\r\nWARNING: Logging before InitGoogleLogging() is written to STDERR\r\nI0413 07:31:31.034801   388 zk_client.cc:540] zookeeper event with type -1, state 3, path \r\nI0413 07:31:31.035395   388 zk_client.cc:555] connect success\r\nI0413 07:31:31.035918   384 db_sdk.cc:73] init zk client with zk cluster 127.0.0.1:2181 , zk path /openmldb,session timeout 2000 and session id 1\r\n"
+  - delay: 7
+    content: "I0413 07:31:31.042577   384 client_manager.cc:471] add client. name 127.0.0.1:10921, endpoint \r\nI0413 07:31:31.042618   384 client_manager.cc:471] add client. name 127.0.0.1:10922, endpoint \r\nI0413 07:31:31.046406   384 db_sdk.cc:88] start to watch table notify\r\n  _____                    ______  _       _____   ______   \r\n / ___ \\                  |  ___ \\| |     (____ \\ (____  \\  \r\n| |   | |____   ____ ____ | | _ | | |      _   \\ \\ ____)  ) \r\n| |   | |  _ \\ / _  )  _ \\| || || | |     | |   | |  __  (  \r\n| |___| | | | ( (/ /| | | | || || | |_____| |__/ /| |__)  ) \r\n \\_____/| ||_/ \\____)_| |_|_||_||_|_______)_____/ |______/  \r\n        |_|                                                 \r\n\r\nv0.4.4.098e05360\r\nI0413 07:31:31.051172   384 db_sdk.h:80] init ns client with endpoint 127.0.0.1:7527 done\r\n"
+  - delay: 11
+    content: "SUCCEED\r\nSUCCEED: Database changed\r\n"
+  - delay: 11
+    content: "I0413 07:31:31.072928   388 zk_client.cc:56] node watcher with event type 3, state 3\r\n"
+  - delay: 14
+    content: "SUCCEED\r\n --- ------- -------- ------ --------- \r\n  #   Field   Type     Null   Default  \r\n --- ------- -------- ------ --------- \r\n  1   id      Int      YES             \r\n  2   time    BigInt   YES             \r\n --- ------- -------- ------ --------- \r\n --- -------------------- ------ ------ ------ --------------- \r\n  #   name                 keys   ts     ttl    ttl_type       \r\n --- -------------------- ------ ------ ------ --------------- \r\n  1   INDEX_0_1649835091   id     time   0min   kAbsoluteTime  \r\n --- -------------------- ------ ------ ------ --------------- \r\n"
+  - delay: 11
+    content: "\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 3456
+    content: e
+  - delay: 358
+    content: x
+  - delay: 297
+    content: i
+  - delay: 167
+    content: t
+  - delay: 251
+    content: "\r\n\e[?2004l\rexit\r\n"
+  - delay: 34
+    content: 'ArkMBP:pulsar-docker ark$ '
+  - delay: 6936
+    content: >-
+      docker run -dit --network host -v `pwd`/files:/pulsar/files --name pulsar
+      apachepulsar/pulsar:2.9.1 bash
+  - delay: 877
+    content: "\r\n"
+  - delay: 206
+    content: "cc010678303a9793099182cff9735ff606b82707ede90b2fd3ffe0dd99f6c85c\r\n"
+  - delay: 182
+    content: 'ArkMBP:pulsar-docker ark$ '
+  - delay: 1771
+    content: l
+  - delay: 163
+    content: s
+  - delay: 239
+    content: "\r\n"
+  - delay: 5
+    content: "files\r\nArkMBP:pulsar-docker ark$ "
+  - delay: 6193
+    content: docker exec -it pulsar bash
+  - delay: 328
+    content: "\r\n"
+  - delay: 262
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# "
+  - delay: 807
+    content: l
+  - delay: 87
+    content: s
+  - delay: 138
+    content: "\r\nLICENSE  NOTICE  README  \e[0m\e[01;34mbin\e[0m  \e[01;34mconf\e[0m  \e[01;34mdata\e[0m  \e[01;34mexamples\e[0m  \e[01;34mfiles\e[0m  \e[01;34minstances\e[0m  \e[01;34mlib\e[0m  \e[01;34mlicenses\e[0m  \e[01;34mpulsar-client\e[0m\r\n\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# "
+  - delay: 6917
+    content: bin/pulsar-daemon start standalone --zookeeper-port 5181
+  - delay: 354
+    content: "\r\n"
+  - delay: 62
+    content: "doing start standalone ...\r\n"
+  - delay: 5
+    content: "starting standalone, logging to /pulsar/logs/pulsar-standalone-docker-desktop.log\r\nNote: Set immediateFlush to true in conf/log4j2.yaml will guarantee the logging event is flushing to disk immediately. The default behavior is switched off due to performance considerations.\r\n"
+  - delay: 3037
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 8035
+    content: p
+  - delay: 148
+    content: s
+  - delay: 181
+    content: ' '
+  - delay: 60
+    content: a
+  - delay: 209
+    content: x
+  - delay: 181
+    content: u
+  - delay: 240
+    content: '|'
+  - delay: 209
+    content: g
+  - delay: 211
+    content: r
+  - delay: 59
+    content: e
+  - delay: 90
+    content: p
+  - delay: 76
+    content: ' '
+  - delay: 120
+    content: p
+  - delay: 135
+    content: u
+  - delay: 193
+    content: l
+  - delay: 91
+    content: s
+  - delay: 135
+    content: a
+  - delay: 30
+    content: r
+  - delay: 212
+    content: "\r\nroot        51  201 41.7 8618452 848548 pts/1  Sl   07:32   0:28 /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Dlog4j.shutdownHookEnabled=false -cp /\e[01;31m\e[Kpulsar\e[m\e[K/conf:::/\e[01;31m\e[Kpulsar\e[m\e[K/lib/*: -Dlog4j.configurationFile=log4j2.yaml -Djute.maxbuffer=10485760 -Djava.net.preferIPv4Stack=true -Dio.netty.tryReflectionSetAccessible=true -D\e[01;31m\e[Kpulsar\e[m\e[K.allocator.exit_on_oom=true -Dio.netty.recycler.maxCapacity.default=1000 -Dio.netty.recycler.linkCapacity=1024 -Xms2g -Xmx2g -XX:MaxDirectMemorySize=4g -XX:+UseG1GC -XX:MaxGCPauseMillis=10 -XX:+ParallelRefProcEnabled -XX:+UnlockExperimentalVMOptions -XX:+DoEscapeAnalysis -XX:ParallelGCThreads=32 -XX:ConcGCThreads=32 -XX:G1NewSizePercent=50 -XX:+DisableExplicitGC -XX:-ResizePLAB -D\e[01;31m\e[Kpulsar\e[m\e[K.log.appender=RollingFile -D\e[01;31m\e[Kpulsar\e[m\e[K.log.dir=/\e[01;31m\e[Kpulsar\e[m\e[K/logs -D\e[01;31m\e[Kpulsar\e[m\e[K.log.level=info -D\e[01;31m\e[Kpulsar\e[m\e[K.log.root.level=info -D\e[01;31m\e[Kpulsar\e[m\e[K.routing.appender.default=Console -Dlog4j2.is.webapp=false -D\e[01;31m\e[Kpulsar\e[m\e[K.functions.process.container.log.dir=/\e[01;31m\e[Kpulsar\e[m\e[K/logs -D\e[01;31m\e[Kpulsar\e[m\e[K.functions.java.instance.jar=/\e[01;31m\e[Kpulsar\e[m\e[K/instances/java-instance.jar -D\e[01;31m\e[Kpulsar\e[m\e[K.functions.python.instance.file=/\e[01;31m\e[Kpulsar\e[m\e[K/instances/python-instance/python_instance_main.py -D\e[01;31m\e[Kpulsar\e[m\e[K.functions.extra.dependencies.dir=/\e[01;31m\e[Kpulsar\e[m\e[K/instances/deps -D\e[01;31m\e[Kpulsar\e[m\e[K.functions.instance.classpath=/\e[01;31m\e[Kpulsar\e[m\e[K/conf:::/\e[01;31m\e[Kpulsar\e[m\e[K/lib/*: -D\e[01;31m\e[Kpulsar\e[m\e[K.functions.log.conf=/\e[01;31m\e[Kpulsar\e[m\e[K/conf/functions_log4j2.xml -Dzookeeper.4lw.commands.whitelist=* -Dzookeeper.snapshot.trust.empty=true -D\e[01;31m\e[Kpulsar\e[m\e[K.log.file=\e[01;31m\e[Kpulsar\e[m\e[K-standalone-docker-desktop.log org.apache.\e[01;31m\e[Kpulsar\e[m\e[K.PulsarStandaloneStarter --config /\e[01;31m\e[Kpulsar\e[m\e[K/conf/standalone.conf --zookeeper-port 5181\r\nroot       594  0.0  0.0   3312   728 pts/1    S+   07:32   0:00 grep --color=auto \e[01;31m\e[Kpulsar\e[m\e[K\r\n\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# "
+  - delay: 4901
+    content: c
+  - delay: 329
+    content: a
+  - delay: 164
+    content: t
+  - delay: 150
+    content: ' '
+  - delay: 150
+    content: f
+  - delay: 106
+    content: i
+  - delay: 150
+    content: l
+  - delay: 60
+    content: e
+  - delay: 225
+    content: s/
+  - delay: 1336
+    content: p
+  - delay: 119
+    content: u
+  - delay: 150
+    content: l
+  - delay: 120
+    content: s
+  - delay: 180
+    content: "\aar-"
+  - delay: 781
+    content: o
+  - delay: 197
+    content: p
+  - delay: 102
+    content: 'enmldb-jdbc-sink.yaml '
+  - delay: 571
+    content: "\r\n"
+  - delay: 5
+    content: "tenant: \"public\"\r\nnamespace: \"default\"\r\nname: \"openmldb-test-sink\"\r\nsinkType: \"jdbc-openmldb\"\r\narchive: \"files/pulsar-io-jdbc-openmldb-2.11.0-SNAPSHOT.nar\"\r\ninputs: [\"test_openmldb\"]\r\nconfigs:\r\n    jdbcUrl: \"jdbc:openmldb:///pulsar_test?zk=localhost:2181&zkPath=/openmldb\"\r\n    tableName: \"connector_test\"\r\n\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 5581
+    content: >-
+      ./bin/pulsar-admin sinks create --sink-config-file
+      files/pulsar-openmldb-jdbc-sink.yaml
+  - delay: 415
+    content: "\r\n"
+  - delay: 18697
+    content: "\"Created successfully\"\r\n"
+  - delay: 399
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 23025
+    content: ./bin/pulsar-admin sinks status --name openmldb-test-sink
+  - delay: 465
+    content: "\r\n"
+  - delay: 6367
+    content: "{\r\n  \"numInstances\" : 1,\r\n  \"numRunning\" : 1,\r\n  \"instances\" : [ {\r\n    \"instanceId\" : 0,\r\n    \"status\" : {\r\n      \"running\" : true,\r\n      \"error\" : \"\",\r\n      \"numRestarts\" : 0,\r\n      \"numReadFromPulsar\" : 0,\r\n      \"numSystemExceptions\" : 0,\r\n      \"latestSystemExceptions\" : [ ],\r\n      \"numSinkExceptions\" : 0,\r\n      \"latestSinkExceptions\" : [ ],\r\n      \"numWrittenToSink\" : 0,\r\n      \"lastReceivedTime\" : 0,\r\n      \"workerId\" : \"c-standalone-fw-localhost-8080\"\r\n    }\r\n  } ]\r\n}\r\n"
+  - delay: 366
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 2072
+    content: c
+  - delay: 358
+    content: a
+  - delay: 135
+    content: t
+  - delay: 1425
+    content: ' '
+  - delay: 1216
+    content: f
+  - delay: 105
+    content: i
+  - delay: 150
+    content: l
+  - delay: 59
+    content: e
+  - delay: 556
+    content: s
+  - delay: 164
+    content: /
+  - delay: 586
+    content: o
+  - delay: 178
+    content: p
+  - delay: 154
+    content: 'enmldb-table-schema '
+  - delay: 358
+    content: "\r\n"
+  - delay: 17
+    content: "{\r\n    \"type\": \"JSON\",\r\n    \"schema\": \"{\\\"type\\\":\\\"record\\\",\\\"name\\\":\\\"OpenMLDBSchema\\\",\\\"namespace\\\":\\\"com.foo\\\",\\\"fields\\\":[{\\\"name\\\":\\\"id\\\",\\\"type\\\":\\\"int\\\"},{\\\"name\\\":\\\"time\\\",\\\"type\\\":\\\"long\\\"}]}\",\r\n    \"properties\": {}\r\n}\r\n\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# "
+  - delay: 5136
+    content: >-
+      ./bin/pulsar-admin schemas upload test_openmldb -f
+      ./files/openmldb-table-schema
+  - delay: 339
+    content: "\r\n"
+  - delay: 4916
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 3759
+    content: ./bin/pulsar-admin schemas get test_openmldb
+  - delay: 339
+    content: "\r\n"
+  - delay: 5178
+    content: "{\r\n  \"version\": 0,\r\n  \"schemaInfo\": {\r\n    \"name\": \"test_openmldb\",\r\n    \"schema\": {\r\n      \"type\": \"record\",\r\n      \"name\": \"OpenMLDBSchema\",\r\n      \"namespace\": \"com.foo\",\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"id\",\r\n          \"type\": \"int\"\r\n        },\r\n        {\r\n          \"name\": \"time\",\r\n          \"type\": \"long\"\r\n        }\r\n      ]\r\n    },\r\n    \"type\": \"JSON\",\r\n    \"properties\": {}\r\n  }\r\n}\r\n"
+  - delay: 386
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 1382
+    content: c
+  - delay: 225
+    content: a
+  - delay: 133
+    content: t
+  - delay: 90
+    content: ' '
+  - delay: 195
+    content: f
+  - delay: 75
+    content: i
+  - delay: 120
+    content: l
+  - delay: 91
+    content: es/
+  - delay: 465
+    content: C
+  - delay: 118
+    content: l
+  - delay: 61
+    content: i
+  - delay: 163
+    content: 'ent.java '
+  - delay: 303
+    content: "\r\n"
+  - delay: 13
+    content: "package org.example;\r\n\r\nimport java.sql.Timestamp;\r\n\r\nimport lombok.AllArgsConstructor;\r\nimport lombok.Builder;\r\nimport lombok.Getter;\r\nimport lombok.NoArgsConstructor;\r\nimport org.apache.pulsar.client.api.Producer;\r\nimport org.apache.pulsar.client.api.PulsarClient;\r\nimport org.apache.pulsar.client.api.PulsarClientException;\r\nimport org.apache.pulsar.client.impl.schema.JSONSchema;\r\n\r\npublic class Client {\r\n    @Builder\r\n    @AllArgsConstructor\r\n    @NoArgsConstructor\r\n    @Getter\r\n    public static class Row {\r\n        int id;\r\n        long time;\r\n    }\r\n\r\n    public static void main(String[] args) throws PulsarClientException {\r\n        PulsarClient client = PulsarClient.builder()\r\n                .serviceUrl(\"pulsar://127.0.0.1:6650\")\r\n                .build();\r\n        Producer<Row> producer = client.newProducer(JSONSchema.of(Row.class))\r\n                .topic(\"test_openmldb\")\r\n                .create();\r\n\r\n        // You can then send messages to the broker and topic you specified:\r\n        producer.send(new Row(1, Timestamp.valueOf(\"2022-04-06 00:00:00\").getTime()));\r\n        producer.send(new Row(2, Timestamp.valueOf(\"2022-04-06 09:00:00\").getTime()));\r\n        producer.flush();\r\n        producer.close();\r\n        client.close();\r\n    }\r\n}\r\n\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# "
+  - delay: 6281
+    content: >-
+      java -cp files/pulsar-client-java-1.0-SNAPSHOT-jar-with-dependencies.jar
+      org.example.Client
+  - delay: 847
+    content: "\r\n"
+  - delay: 349
+    content: "SLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\r\nSLF4J: Defaulting to no-operation (NOP) logger implementation\r\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\r\n"
+  - delay: 3991
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 2025
+    content: './bin/pulsar-admin sinks status --name openmldb-test-sink '
+  - delay: 385
+    content: "\r\n"
+  - delay: 4009
+    content: "{\r\n  \"numInstances\" : 1,\r\n  \"numRunning\" : 1,\r\n  \"instances\" : [ {\r\n    \"instanceId\" : 0,\r\n    \"status\" : {\r\n      \"running\" : true,\r\n      \"error\" : \"\",\r\n      \"numRestarts\" : 0,\r\n      \"numReadFromPulsar\" : 2,\r\n      \"numSystemExceptions\" : 0,\r\n      \"latestSystemExceptions\" : [ ],\r\n      \"numSinkExceptions\" : 0,\r\n      \"latestSinkExceptions\" : [ ],\r\n      \"numWrittenToSink\" : 2,\r\n      \"lastReceivedTime\" : 1649835240549,\r\n      \"workerId\" : \"c-standalone-fw-localhost-8080\"\r\n    }\r\n  } ]\r\n}\r\n"
+  - delay: 392
+    content: "\e]0;root@docker-desktop: /pulsar\aroot@docker-desktop:/pulsar# \e[K"
+  - delay: 3234
+    content: e
+  - delay: 223
+    content: x
+  - delay: 120
+    content: i
+  - delay: 120
+    content: t
+  - delay: 270
+    content: "\r\nexit\r\n"
+  - delay: 112
+    content: 'ArkMBP:pulsar-docker ark$ '
+  - delay: 605
+    content: d
+  - delay: 149
+    content: o
+  - delay: 75
+    content: c
+  - delay: 206
+    content: k
+  - delay: 64
+    content: e
+  - delay: 75
+    content: r
+  - delay: 105
+    content: ' '
+  - delay: 150
+    content: e
+  - delay: 239
+    content: x
+  - delay: 197
+    content: e
+  - delay: 209
+    content: c
+  - delay: 1486
+    content: ' '
+  - delay: 134
+    content: '-'
+  - delay: 225
+    content: i
+  - delay: 150
+    content: t
+  - delay: 121
+    content: ' '
+  - delay: 179
+    content: o
+  - delay: 180
+    content: p
+  - delay: 105
+    content: e
+  - delay: 120
+    content: 'n'
+  - delay: 180
+    content: m
+  - delay: 91
+    content: l
+  - delay: 59
+    content: d
+  - delay: 105
+    content: b
+  - delay: 180
+    content: ' '
+  - delay: 316
+    content: b
+  - delay: 89
+    content: a
+  - delay: 195
+    content: s
+  - delay: 120
+    content: h
+  - delay: 525
+    content: "\r\n"
+  - delay: 435
+    content: "\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 2359
+    content: c
+  - delay: 269
+    content: a
+  - delay: 89
+    content: t
+  - delay: 90
+    content: ' '
+  - delay: 346
+    content: f
+  - delay: 149
+    content: i
+  - delay: 121
+    content: l
+  - delay: 76
+    content: e
+  - delay: 494
+    content: /
+  - delay: 375
+    content: s
+  - delay: 165
+    content: l
+  - delay: 74
+    content: e
+  - delay: 287
+    content: "\a"
+  - delay: 391
+    content: "\b \b"
+  - delay: 165
+    content: "\b \b"
+  - delay: 162
+    content: e
+  - delay: 180
+    content: l
+  - delay: 120
+    content: "\a"
+  - delay: 692
+    content: "\b \b"
+  - delay: 151
+    content: "\b \b"
+  - delay: 523
+    content: "\b \b"
+  - delay: 257
+    content: "\b \b"
+  - delay: 147
+    content: s
+  - delay: 390
+    content: /
+  - delay: 286
+    content: s
+  - delay: 254
+    content: e
+  - delay: 136
+    content: l
+  - delay: 74
+    content: e
+  - delay: 187
+    content: 'ct.sql '
+  - delay: 429
+    content: "\r\n\e[?2004l\r"
+  - delay: 6
+    content: "set @@execute_mode='online';\r\nuse pulsar_test;\r\nselect * from connector_test;\r\n\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 6060
+    content: "\e[7m../openmldb/bin/openmldb --zk_cluster=127.0.0.1:2181 --zk_root_path=/openmldb --role=sql_client < files/select.sql\e[27m"
+  - delay: 579
+    content: "\rroot@docker-desktop:/work/taxi-trip# ../openmldb/bin/openmldb --zk_cluster=127.0.0.1:2181 --zk_root_path=/openmldb --role=sql_client < files/select.sql\r\n\e[?2004l\r"
+  - delay: 86
+    content: "2022-04-13 07:34:36,596:410(0x7fac96d09e40):ZOO_INFO@log_env@753: Client environment:zookeeper.version=zookeeper C client 3.4.14\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@757: Client environment:host.name=docker-desktop\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@764: Client environment:os.name=Linux\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@765: Client environment:os.arch=5.10.76-linuxkit\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@766: Client environment:os.version=#1 SMP Mon Nov 8 10:21:19 UTC 2021\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@774: Client environment:user.name=(null)\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@782: Client environment:user.home=/root\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@log_env@794: Client environment:user.dir=/work/taxi-trip\r\n2022-04-13 07:34:36,598:410(0x7fac96d09e40):ZOO_INFO@zookeeper_init@827: Initiating client connection, host=127.0.0.1:2181 sessionTimeout=2000 watcher=0x7c16c0 sessionId=0 sessionPasswd=<null> context=0x553a000 flags=0\r\n2022-04-13 07:34:36,599:410(0x7fac95cad700):ZOO_INFO@check_events@1764: initiated connection to server [127.0.0.1:2181]\r\n"
+  - delay: 8
+    content: "2022-04-13 07:34:36,606:410(0x7fac95cad700):ZOO_INFO@check_events@1811: session establishment complete on server [127.0.0.1:2181], sessionId=0x1001976f3630007, negotiated timeout=4000\r\nWARNING: Logging before InitGoogleLogging() is written to STDERR\r\nI0413 07:34:36.606945   414 zk_client.cc:540] zookeeper event with type -1, state 3, path \r\nI0413 07:34:36.607424   414 zk_client.cc:555] connect success\r\nI0413 07:34:36.607642   410 db_sdk.cc:73] init zk client with zk cluster 127.0.0.1:2181 , zk path /openmldb,session timeout 2000 and session id 1\r\n"
+  - delay: 8
+    content: "I0413 07:34:36.615646   410 client_manager.cc:471] add client. name 127.0.0.1:10921, endpoint \r\nI0413 07:34:36.615717   410 client_manager.cc:471] add client. name 127.0.0.1:10922, endpoint \r\nI0413 07:34:36.619015   410 db_sdk.cc:88] start to watch table notify\r\n  _____                    ______  _       _____   ______   \r\n / ___ \\                  |  ___ \\| |     (____ \\ (____  \\  \r\n| |   | |____   ____ ____ | | _ | | |      _   \\ \\ ____)  ) \r\n| |   | |  _ \\ / _  )  _ \\| || || | |     | |   | |  __  (  \r\n| |___| | | | ( (/ /| | | | || || | |_____| |__/ /| |__)  ) \r\n \\_____/| ||_/ \\____)_| |_|_||_||_|_______)_____/ |______/  \r\n        |_|                                                 \r\n\r\nv0.4.4.098e05360\r\nI0413 07:34:36.623824   410 db_sdk.h:80] init ns client with endpoint 127.0.0.1:7527 done\r\n"
+  - delay: 6
+    content: "SUCCEED\r\n"
+  - delay: 6
+    content: "SUCCEED: Database changed\r\n"
+  - delay: 95
+    content: " ---- --------------- \r\n  id   time           \r\n ---- --------------- \r\n  1    1649203200000  \r\n  2    1649235600000  \r\n ---- --------------- \r\n"
+  - delay: 12
+    content: "\e[?2004hroot@docker-desktop:/work/taxi-trip# "
+  - delay: 34885
+    content: e
+  - delay: 222
+    content: x
+  - delay: 90
+    content: i
+  - delay: 150
+    content: t
+  - delay: 451
+    content: "\r\n\e[?2004l\rexit\r\n"
+  - delay: 32
+    content: 'ArkMBP:pulsar-docker ark$ '
+  - delay: 1271
+    content: "logout\r\n"
