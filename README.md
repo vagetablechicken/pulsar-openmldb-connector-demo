@@ -1,7 +1,7 @@
 # pulsar-openmldb-connector-demo
-Demo detail doc see [demo.md](demo.md), doc with pics see https://docs.google.com/document/d/1j6CqzeX2P1oiGMEiBMrWk4ERYXxrLzv-hD3V3RZ7Tvg/edit?usp=sharing
+Demo detail doc see [OpenMLDB connector demo](https://openmldb.ai/docs/en/main/use_case/pulsar_openmldb_connector_demo.html).
 
-Demo video see https://terminalizer.com/view/987414935665
+Demo video see https://terminalizer.com/view/be2309235671
 
 Demo script is [demo.yml](demo.yml), you can download and play it.
 
